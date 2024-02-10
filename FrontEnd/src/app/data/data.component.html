@@ -1,0 +1,24 @@
+
+
+<div class="container">
+    <h3 class="title">Book List</h3>
+    <div *ngIf="isSuccess == false" class="alert alert-danger">Failed to get Data </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Publish Date</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let book of books">
+                <td>{{book.Title}}</td>
+                <td>{{book.Author}}</td>
+                <td>{{book.PublishDate}}</td>
+                <td><img [src] = "book.ImageUrl" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
